@@ -1,6 +1,7 @@
 package com.example.usersapi.models;
 
 import lombok.*;
+
 import javax.persistence.*;
 
 @Data
@@ -12,11 +13,11 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    public User(String userName, String firstName, String lastName) {
-        this.userName = userName;
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
+//    public User(String userName, String firstName, String lastName) {
+//        this.userName = userName;
+//        this.firstName = firstName;
+//        this.lastName = lastName;
+//    }
 
     @Column(name = "USER_NAME")
     private String userName;

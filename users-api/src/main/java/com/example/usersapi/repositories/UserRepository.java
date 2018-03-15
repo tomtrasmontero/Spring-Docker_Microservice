@@ -1,10 +1,15 @@
 package com.example.usersapi.repositories;
 
 import com.example.usersapi.models.User;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import org.springframework.data.repository.CrudRepository;
 
-@SpringBootApplication
+import java.util.List;
+import java.util.Optional;
+
 public interface UserRepository extends CrudRepository<User, Long> {
 
+    List<User> getByid(Long newId);
+
+    Optional<User> findByuserName(String userName);
 }
